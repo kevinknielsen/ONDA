@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import styled from 'styled-components';
+import Header from './components/Header';
+import WelcomeSection from './components/WelcomeSection';
+import SubmissionRegistry from './components/SubmissionRegistry';
+import Footer from './components/Footer';
 
-function App() {
+const PageContainer = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+`;
+
+const ContentWrapper = styled.div`
+  display: flex;
+  gap: 40px;
+`;
+
+const ArtistRegistry = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <PageContainer>
+      <Header />
+      <ContentWrapper>
+        <WelcomeSection />
+        <SubmissionRegistry />
+      </ContentWrapper>
+      <Footer />
+    </PageContainer>
   );
-}
+};
 
-export default App;
+export default ArtistRegistry;
