@@ -19,7 +19,7 @@ const RegistryContainer = styled.div`
   border-radius: 16px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 400px;
-  height: 500px;
+  height: auto;
   display: flex;
   flex-direction: column;
 `;
@@ -33,6 +33,8 @@ const Title = styled.h2`
   color: #333;
   margin-bottom: 16px;
 `;
+
+
 
 const HeaderBar = styled.div`
   display: flex;
@@ -173,7 +175,7 @@ const SubmissionRegistry = () => {
             <ActionButton onClick={() => openModal(submission)}>
               <ActionIcon src={VoteImage} alt="VoteImage" />
             </ActionButton>
-            <ActionButton >
+            <ActionButton onClick={() => openModal(submission)}>
               <ActionIcon src={SubmissionButton} alt="SubmissionButton" />
             </ActionButton>
           </SubmissionItem>

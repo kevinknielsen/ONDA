@@ -4,6 +4,8 @@ import Header from './components/Header';
 import WelcomeSection from './components/WelcomeSection';
 import SubmissionRegistry from './components/SubmissionRegistry';
 import Footer from './components/Footer';
+import ArtistCommunity from './components/ArtistCommunity';
+
 
 const PageContainer = styled.div`
   max-width: 1200px;
@@ -25,6 +27,7 @@ const ArtistRegistry = () => {
         <WelcomeSection />
         <SubmissionRegistry />
       </ContentWrapper>
+      <ArtistCommunity />
       <Footer />
     </PageContainer>
   );
